@@ -6,7 +6,11 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "'mvn' -Dmaven.test.failure.ignore clean package"
+                if(isUnix() == true) {
+                    sh "'mvn' -Dmaven.test.failure.ignore clean package"
+                } else {
+                    bat "'mvn' -Dmaven.test.failure.ignore clean package"
+                }
             }
         }
 
