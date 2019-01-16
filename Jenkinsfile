@@ -1,7 +1,26 @@
 #!/usr/bin/env groovy 
 
-node {
-    deleteDir()
-    sh "git clone --depth 1 https://github.com/SAP/cloud-s4-sdk-pipeline.git pipelines"
-    load './pipelines/s4sdk-pipeline.groovy'
+pipeline {
+    agent any
+    options {
+        timeout(time: 120, unit: 'MINUTES')
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        skipDefaultCheckout()
+    }
+    stages {
+
+        stage('Build') {
+            sh "'${MAVEN_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+        }
+
+        stage('Test') {
+            echo 'test'
+        }
+
+        stage('Deployment') {
+            echo 'deploy'
+        }
+
+    }
 }
