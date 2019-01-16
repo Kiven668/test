@@ -10,7 +10,7 @@ pipeline {
                     if(isUnix() == true) {
                         sh "'mvn' -Dmaven.test.failure.ignore clean package"
                     } else {
-                        bat "'mvn' -Dmaven.test.failure.ignore clean package"
+                        bat "mvn -Dmaven.test.failure.ignore clean package"
                     }
                 }
             }
