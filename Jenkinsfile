@@ -24,7 +24,13 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                echo 'deploy'
+                script {
+                    if(isUnix() == true) {
+                        sh "cf push"
+                    } else {
+                        bat "cf push"
+                    }
+                }
             }
         }
 
