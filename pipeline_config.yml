@@ -13,7 +13,7 @@ steps:
     smokeTestStatusCode: '200'
     cloudFoundry:
     org: 'I504818trial_trial'
-    space: 'trial'
+    space: 'dev'
     appName: 'address-manager'
     manifest: 'manifest.yml'
     credentialsId: 'fc9a5a5c-bc81-41b9-be4b-4500427fb4f9'
@@ -40,7 +40,7 @@ stages:
   productionDeployment:
     cfTargets:
       - org: 'I504818trial_trial'
-        space: 'trial'
+        space: 'dev'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
         appName: 'address-manager'
         manifest: 'manifest.yml'
