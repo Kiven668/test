@@ -11,6 +11,13 @@ steps:
   cloudFoundryDeploy:
     dockerImage: 's4sdk/docker-cf-cli'
     smokeTestStatusCode: '200'
+    cloudFoundry:
+    org: 'I504818trial_trial'
+    space: 'trial'
+    appName: 'address-manager'
+    manifest: 'manifest.yml'
+    credentialsId: 'fc9a5a5c-bc81-41b9-be4b-4500427fb4f9'
+    apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
 
 
 #Stage Specific Configurations
