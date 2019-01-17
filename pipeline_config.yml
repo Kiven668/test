@@ -9,7 +9,7 @@ steps:
     projectSettingsFile : ''
 
   deployToCfWithCli:
-#    dockerImage: 's4sdk/docker-cf-cli'
+    dockerImage: 's4sdk/docker-cf-cli'
     smokeTestStatusCode: '200'
 
 
