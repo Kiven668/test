@@ -17,7 +17,7 @@ steps:
       space: 'dev'
       appName: 'address-manager'
       manifest: 'manifest.yml'
-      credentialsId: 'fc9a5a5c-bc81-41b9-be4b-4500427fb4f9'
+      credentialsId: '771ff910-473c-407e-a3ea-1fba072e7a55'
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
 
 
@@ -45,4 +45,4 @@ stages:
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
         appName: 'address-manager'
         manifest: 'manifest.yml'
-        credentialsId: 'fc9a5a5c-bc81-41b9-be4b-4500427fb4f9'
+        credentialsId: '771ff910-473c-407e-a3ea-1fba072e7a55'
